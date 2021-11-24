@@ -92,19 +92,19 @@ def takecommand():
                         os.startfile('C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe')
 
         """
-	elif 'arrange' in query and 'files' in query:
-	path = tkinter.filedialog.askdirectory()
+		elif 'arrange' in query and 'files' in query:
+		path = tkinter.filedialog.askdirectory()
         #This populates a list with the filenames in the directory
-	list_ = os.listdir(path)
-	#Traverses every file
+		list_ = os.listdir(path)
+		#Traverses every file
         for file_ in list_:
-		name,ext = os.path.splitext(file_)
-                print(name)
-                #Stores the extension type
-                ext = ext[1:]
-                #If it is directory, it forces the next iteration
-                if ext == '':
-                    continue
+			name,ext = os.path.splitext(file_)
+            print(name)
+            #Stores the extension type
+            ext = ext[1:]
+            #If it is directory, it forces the next iteration
+            if ext == '':
+				continue
                 #If a directory with the name 'ext' exists, it moves the file to that directory
                 if os.path.exists(path+'/'+ext):
                     shutil.move(path+'/'+file_,path+'/'+ext+'/'+file_)
@@ -112,7 +112,7 @@ def takecommand():
                 else:
                     os.makedirs(path+'/'+ext)
                     shutil.move(path+'/'+file_,path+'/'+ext+'/'+file_)
-	"""
+		"""
         
         elif 'joke' in query or 'laugh' in query:
             r2 = requests.get("https://v2.jokeapi.dev/joke/Any")
