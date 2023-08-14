@@ -1,5 +1,5 @@
 # Chatbot-using-Python
-Simple chatbot using voice command using Python
+Simple gui chatbot using voice command using Python
 
 Libraries used:- 
 1) pyttsx3
